@@ -13,11 +13,9 @@ galleryItems.forEach(item => {
     containerEl.append(div)
     div.addEventListener('click', (e) => {
     e.preventDefault()
-    console.log(e)
-    const instance = basicLightbox.create(`
+    let instance = basicLightbox.create(`
     <img src= "${item.original}">`)
     instance.show()
-    console.log(e.target.src);
     instance = basicLightbox.create(`
   <img src='${e.target.src}'/>`);
         instance.show();
